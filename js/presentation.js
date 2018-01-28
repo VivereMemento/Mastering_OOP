@@ -250,7 +250,7 @@
 			init: init
 		}
 	}());
-	MVP.init();
+	// MVP.init();
 	
 	const MVVM = (function () {
 
@@ -464,4 +464,3 @@ const addMessage = (function () {
 		init: init
 	}
 })();
-addMessage.init("Привет Саша");
