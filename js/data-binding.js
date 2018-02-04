@@ -1,4 +1,4 @@
-const DataBinding = (function () {
+(function () {
 	console.log('THIS IS DATA BINDING');
 
 	const menualDataBinding = (function () {
@@ -449,6 +449,6 @@ const DataBinding = (function () {
 		}
 
 	}());
-	dataBindingWithProxy.init();
+	// dataBindingWithProxy.init();
 
 })();
