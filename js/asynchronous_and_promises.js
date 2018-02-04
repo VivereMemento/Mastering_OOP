@@ -40,7 +40,15 @@
 
 		let init = function () {
 			myPromise.then(function(data) {
-				console.log(data);
+				console.log('this is data of promise:', data.name);
+				return httpGet('https://www.json-generator.com/api/json/get/clvfzayBea?indent=2');
+			}).then((data) => {
+				console.log('this is data of another promise', data.various.Hubmburger);
+				return httpGet('http://www.json-generator.com/api/json/get/bUKepXQcgO?indent=2');
+			}).then((data) => {
+				console.log('this is data of another promise', data.person);
+			}).catch((error) => {
+				console.log(error);
 			});
 		}
 
@@ -65,7 +73,7 @@
 					if (httpReq.readyState == 4) {
 						if (httpReq.status == 200) {
 							data = JSON.parse(httpReq.responseText);
-							resolve(data);
+								resolve(data);
 						} else {
 							reject(new Error(httpReq.statusText));
 						}
